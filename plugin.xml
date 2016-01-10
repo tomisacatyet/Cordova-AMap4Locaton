@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        id="cordova-plugin-amap4location" version="0.0.1">
+
+  <name>AMap4Location Plugin</name>
+  <description>AMap Location For Cordova Plugin</description>
+  <author>mr_der</author>
+  <license>Apache 2.0 License</license>
+  <keywords>amaplocation,amap</keywords>
+
+  <engines>
+    <engine name="cordova" version=">=3.4.0" />
+  </engines>
+
+  <asset src="www/amap4location.js" target="js/amap4location.js" />
+
+  <js-module src="www/amap4location.js" name="amap4location">
+    <clobbers target="window.amaplocation" />
+  </js-module>
+
+  <platform name="android">
+    <config-file target="res/xml/config.xml" parent="/*">
+      <feature name="AMapLocation4Plugin">
+        <param name="android-package" value="com.mr_der.cordova.AMapLocationPlugin" />
+      </feature>
+    </config-file>
+    <!-- android -->
+    <source-file src="src/android/AMapLocationPlugin.java"
+                 target-dir="src/com/mr_der/cordova" />
+    <source-file src="src/android/AMap_Location_V2.2.0_20151222.jar" target-dir="libs" />
+
+    <config-file target="AndroidManifest.xml" parent="/manifest">
+      <!--用于进行网络定位-->
+      <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"></uses-permission>
+      <!--用于访问GPS定位-->
+      <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"></uses-permission>
+      <!-- 获取运营商信息，用于支持提供运营商信息相关的接口-->
+      <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
+      <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位-->
+      <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"></uses-permission>
+      <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位-->
+      <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"></uses-permission>
+      <!--用于访问网络，网络定位需要上网-->
+      <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+      <!-- 用于读取手机当前的状态-->
+      <uses-permission android:name="android.permission.READ_PHONE_STATE"></uses-permission>
+      <!-- 写入扩展存储，向扩展卡写入数据，用于写入缓存定位数据-->
+      <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
+    </config-file>
+    <config-file target="AndroidManifest.xml" parent="/manifest/application">
+      <!-- 定位需要的服务 -->
+      <service android:name="com.amap.api.location.APSService" />
+      <!--<meta-data-->
+              <!--android:name="com.amap.api.v2.apikey"-->
+              <!--android:value="0670a615d302adc5f1dfc5fa030c9c14" />-->
+      <meta-data
+              android:name="com.amap.api.v2.apikey"
+              android:value="12b0bfa6074cd52561528ad5991d9c1d" />
+    </config-file>
+
+  </platform>
+
+  <platform name="ios">
+    <config-file target="config.xml" parent="/*">
+      <feature name="AMapLocation4Plugin">
+        <param name="ios-package" value="CDVAMap4Location"/>
+      </feature>
+    </config-file>
+
+    <source-file src="src/ios/CDVAMap4Location.h" />
+    <source-file src="src/ios/CDVAMap4Location.m" />
+    <!--引入framework-->
+    <framework src="src/ios/AMapLocationKit.framework" custom="true" />
+
+    <framework src="CoreTelephony.framework" />
+    <framework src="SystemConfiguration.framework" />
+    <framework src="CoreLocation.framework" />
+    <!--XCode9.1存在BUG 需手动添加下-->
+    <framework src="libz.tbd" />
+
+    <config-file target="*-Info.plist" parent="NSLocationWhenInUseUsageDescription">
+      <string>个别模块需要定位权限才可以使用</string>
+    </config-file>
+
+    <config-file target="*-Info.plist" parent="NSAppTransportSecurity">
+      <dict>
+        <key>NSAllowsArbitraryLoads</key>
+        <true/>
+      </dict>
+    </config-file>
+
+  </platform>
+</plugin>
