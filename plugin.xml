@@ -67,7 +67,7 @@
       </feature>
     </config-file>
 
-    <source-file src="src/ios/CDVAMap4Location.h" />
+    <header-file src="src/ios/CDVAMap4Location.h" />
     <source-file src="src/ios/CDVAMap4Location.m" />
     <!--引入framework-->
     <framework src="src/ios/AMapLocationKit.framework" custom="true" />
