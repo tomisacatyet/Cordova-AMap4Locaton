@@ -7,9 +7,9 @@ module.exports = {
         cordova.exec(successCallback, errorCallback, "AMap4LocationPlugin", "initConfig", []);
     },
     location: function (successCallback, errorCallback) {
-        cordova.exec(successCallback, errorCallback, "AMap4Location4Plugin", "location", []);
+        cordova.exec(successCallback, errorCallback, "AMap4LocationPlugin", "location", []);
     },
     stop: function (successCallback, errorCallback) {
-        cordova.exec(successCallback, errorCallback, "AMap4Location4Plugin", "stop", []);
+        cordova.exec(successCallback, errorCallback, "AMap4LocationPlugin", "stop", []);
     }
 };
