@@ -1,7 +1,7 @@
-#高德Cordova 定位 插件
-
-##Android
-
+高德Cordova 定位 插件
+==
+Android
+--
 ###Android API：
 http://lbs.amap.com/api/android-location-sdk/locationsummary/
 ###Android配置项：
@@ -9,8 +9,8 @@ http://lbs.amap.com/api/android-location-sdk/locationsummary/
   android:name="com.amap.api.v2.apikey"
   android:value="申请的appKey" />
 
-##iOS
-
+iOS
+--
 ###iOS API:
 http://lbs.amap.com/api/ios-location-sdk/summary/
 ###iOS配置项(待完善):
