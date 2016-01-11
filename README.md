@@ -20,9 +20,10 @@ iOS配置项(待完善):
 
 调用示例：
 --
+```javascript
 if(window.amap4location){
-  window.amap4location.location(function (response) { 
-    /**                     
+  window.amap4location.location(function (response) {
+    /**
      * {
      * provinceName:'',
      * cityName:'',
