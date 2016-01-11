@@ -14,8 +14,8 @@ iOS配置项(待完善):
 
 
 调用示例：
-if(window.amaplocation){
-  window.amaplocation.location(function (response) {
+if(window.amap4location){
+  window.amap4location.location(function (response) {
     /**
      * {
      * provinceName:'',

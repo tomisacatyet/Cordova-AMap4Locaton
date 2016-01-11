@@ -15,7 +15,7 @@
   <asset src="www/amap4location.js" target="js/amap4location.js" />
 
   <js-module src="www/amap4location.js" name="amap4location">
-    <clobbers target="window.amaplocation" />
+    <clobbers target="window.amap4location" />
   </js-module>
 
   <platform name="android">
