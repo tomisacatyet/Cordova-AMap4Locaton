@@ -4,7 +4,7 @@
 
   <name>AMap4Location Plugin</name>
   <description>AMap Location For Cordova Plugin</description>
-  <author>mr_der</author>
+  <author>tomisacat</author>
   <license>Apache 2.0 License</license>
   <keywords>amaplocation,amap</keywords>
 
@@ -15,18 +15,18 @@
   <asset src="www/amap4location.js" target="js/amap4location.js" />
 
   <js-module src="www/amap4location.js" name="amap4location">
-    <clobbers target="window.amaplocation" />
+    <clobbers target="plugins.amap4location" />
   </js-module>
 
   <platform name="android">
     <config-file target="res/xml/config.xml" parent="/*">
       <feature name="AMapLocation4Plugin">
-        <param name="android-package" value="com.mr_der.cordova.AMapLocationPlugin" />
+        <param name="android-package" value="com.tomisacat.cordova.AMapLocationPlugin" />
       </feature>
     </config-file>
     <!-- android -->
     <source-file src="src/android/AMapLocationPlugin.java"
-                 target-dir="src/com/mr_der/cordova" />
+                 target-dir="src/com/tomisacat/cordova" />
     <source-file src="src/android/AMap_Location_V2.2.0_20151222.jar" target-dir="libs" />
 
     <config-file target="AndroidManifest.xml" parent="/manifest">
