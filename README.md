@@ -1,5 +1,7 @@
-高德Cordova 定位 插件
+高德Cordova 定位插件
 ==
+加深对于Cordova插件的理解编写的Demo例子
+<br>
 Android
 --
 ###Android API：
@@ -8,13 +10,13 @@ http://lbs.amap.com/api/android-location-sdk/locationsummary/
 <meta-data
   android:name="com.amap.api.v2.apikey"
   android:value="申请的appKey" />
-
+<br>
 iOS
 --
 ###iOS API:
 http://lbs.amap.com/api/ios-location-sdk/summary/
 ###iOS配置项(待完善):
-
+<br>
 调用示例
 --
 ```javascript
