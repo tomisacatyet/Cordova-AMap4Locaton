@@ -7,6 +7,9 @@
   <author>tomisacat</author>
   <license>Apache 2.0 License</license>
   <keywords>amaplocation,amap</keywords>
+  <license>Apache 2.0</license>
+  <repo>https://github.com/tomisacatyet/AMap4Location.git</repo>
+  <issue>https://github.com/tomisacatyet/AMap4Location/issues</issue>
 
   <engines>
     <engine name="cordova" version=">=3.4.0" />
