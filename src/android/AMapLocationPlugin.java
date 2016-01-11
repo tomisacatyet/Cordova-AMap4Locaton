@@ -1,4 +1,4 @@
-package com.mr_der.cordova;
+package com.tomisacat.cordova;
 
 import android.content.Context;
 import android.util.Log;
