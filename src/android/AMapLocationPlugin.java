@@ -1,4 +1,4 @@
-package com.tomisacat.cordova;
+package com.mr_der.cordova;
 
 import android.content.Context;
 import android.util.Log;
@@ -17,8 +17,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 /**
- * 高德定位Cordova插件
- * Created by tomisacat on 16/1/7.
+ * Created by akso on 16/1/7.
  */
 public class AMapLocationPlugin extends CordovaPlugin implements AMapLocationListener {
 
