@@ -1,22 +1,28 @@
 高德Cordova 定位 插件
+==
 
 Android API：
+--
 http://lbs.amap.com/api/android-location-sdk/locationsummary/
 Android配置项：
+--
 <meta-data
   android:name="com.amap.api.v2.apikey"
   android:value="申请的appKey" />
 
 iOS API:
+--
 http://lbs.amap.com/api/ios-location-sdk/summary/
 iOS配置项(待完善):
+--
 
 
 
 调用示例：
+--
 if(window.amap4location){
-  window.amap4location.location(function (response) {
-    /**
+  window.amap4location.location(function (response) { 
+    /**                     
      * {
      * provinceName:'',
      * cityName:'',
