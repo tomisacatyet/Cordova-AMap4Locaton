@@ -15,17 +15,17 @@
   <asset src="www/amap4location.js" target="js/amap4location.js" />
 
   <js-module src="www/amap4location.js" name="amap4location">
-    <clobbers target="plugins.amap4location" />
+    <clobbers target="window.amap4location" />
   </js-module>
 
   <platform name="android">
     <config-file target="res/xml/config.xml" parent="/*">
-      <feature name="AMapLocation4Plugin">
-        <param name="android-package" value="com.tomisacat.cordova.AMapLocationPlugin" />
+      <feature name="AMap4LocationPlugin">
+        <param name="android-package" value="com.tomisacat.cordova.AMap4LocationPlugin" />
       </feature>
     </config-file>
     <!-- android -->
-    <source-file src="src/android/AMapLocationPlugin.java"
+    <source-file src="src/android/AMap4LocationPlugin.java"
                  target-dir="src/com/tomisacat/cordova" />
     <source-file src="src/android/AMap_Location_V2.2.0_20151222.jar" target-dir="libs" />
 
@@ -62,7 +62,7 @@
 
   <platform name="ios">
     <config-file target="config.xml" parent="/*">
-      <feature name="AMapLocation4Plugin">
+      <feature name="AMap4LocationPlugin">
         <param name="ios-package" value="CDVAMap4Location"/>
       </feature>
     </config-file>
