@@ -1,8 +1,6 @@
 //
 //  CDVAMapLocation.h
-//  HybirdDemo
-//
-//  Created by MacBookPro on 16/1/8.
+//  Created by tomisacat on 16/1/8.
 //
 //
 

@@ -17,9 +17,9 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 /**
- * Created by akso on 16/1/7.
+ * Created by tomisacat on 16/1/7.
  */
-public class AMapLocationPlugin extends CordovaPlugin implements AMapLocationListener {
+public class AMap4LocationPlugin extends CordovaPlugin implements AMapLocationListener {
 
     private static Context mContext;
 
