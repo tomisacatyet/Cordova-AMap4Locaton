@@ -2,11 +2,11 @@
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
         id="cordova-plugin-amap4location" version="0.0.1">
 
-  <name>AMap4Location Plugin</name>
-  <description>AMap Location For Cordova Plugin</description>
+  <name>AMap4Location</name>
+  <description>Cordova AMap4Location Plugin</description>
   <author>tomisacat</author>
   <license>Apache 2.0 License</license>
-  <keywords>amaplocation,amap</keywords>
+  <keywords>cordova,location</keywords>
   <license>Apache 2.0</license>
   <repo>https://github.com/tomisacatyet/AMap4Location.git</repo>
   <issue>https://github.com/tomisacatyet/AMap4Location/issues</issue>
