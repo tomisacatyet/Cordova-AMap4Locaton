@@ -27,15 +27,9 @@ http://lbs.amap.com/api/ios-location-sdk/summary/
 ```javascript
 if(cordova.plugins.amap4location){
   cordova.plugins.amap4location.location(function (response) {
-    /**
-     * {
-     * provinceName:'',
-     * cityName:'',
-     * cityCode:'',
-     * districtName:'',
-     * roadName:''
-     * }
-     */
+    /**{provinceName:'',cityName:'',
+        cityCode:'',districtName:'',
+        roadName:''}*/
     alert("当前的位置:" +
         "  省份-"+response['provinceName']
         +" 市-"+response['cityName']
@@ -43,12 +37,7 @@ if(cordova.plugins.amap4location){
         +" 街-"+response['roadName']);
   }, function (error) {
   alert(error);
-    /**
-     * {
-     *  errorInfo:'',
-     *  errorCode:''
-     * }
-     */
+    /**{errorInfo:'',errorCode:''}*/
      alert("异常信息:"
          + " 错误编码:"+error['errorCode']
          + " 错误信息"+error['errorInfo']);
