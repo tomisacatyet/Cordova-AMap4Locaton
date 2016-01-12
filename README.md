@@ -48,3 +48,4 @@ if(window.amap4location){
          + " 错误编码:"+error['errorCode']
          + " 错误信息"+error['errorInfo']);
   });
+  }
