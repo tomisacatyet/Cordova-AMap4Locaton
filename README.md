@@ -7,21 +7,21 @@ Android
 ###Android API：
 http://lbs.amap.com/api/android-location-sdk/locationsummary/
 ###Android配置项：
-```java
-<meta-data
-  android:name="com.amap.api.v2.apikey"
+```xml
+<meta-data android:name="com.amap.api.v2.apikey"
   android:value="申请的apikey" />
-
+```
 <br>
 iOS
 --
 ###iOS API:
 http://lbs.amap.com/api/ios-location-sdk/summary/
 ###iOS配置项:
-```ios
+```xml
 <config-file target="*-Info.plist" parent="AMapApiKey">
   <string>申请的apiKey</string>
 </config-file>
+```
 <br>
 调用示例
 --
@@ -55,3 +55,4 @@ if(cordova.plugins.amap4location){
          + " 错误信息"+error['errorInfo']);
   });
   }
+```
