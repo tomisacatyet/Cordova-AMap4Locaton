@@ -20,8 +20,8 @@ http://lbs.amap.com/api/ios-location-sdk/summary/
 调用示例
 --
 ```javascript
-if(window.amap4location){
-  window.amap4location.location(function (response) {
+if(cordova.plugins.amap4location){
+  cordova.plugins.amap4location.location(function (response) {
     /**
      * {
      * provinceName:'',
