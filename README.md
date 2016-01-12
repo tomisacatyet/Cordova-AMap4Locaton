@@ -11,7 +11,6 @@ http://lbs.amap.com/api/android-location-sdk/locationsummary/
 <meta-data android:name="com.amap.api.v2.apikey"
   android:value="申请的apikey" />
 ```
-<br>
 iOS
 --
 ###iOS API:
