@@ -2,11 +2,11 @@
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
         id="cordova-plugin-amap4location" version="0.0.1">
 
-  <name>AMap4Location</name>
-  <description>Cordova AMap4Location Plugin</description>
+  <name>AMap4Location Plugin</name>
+  <description>AMap Location For Cordova Plugin</description>
   <author>tomisacat</author>
   <license>Apache 2.0 License</license>
-  <keywords>cordova,location</keywords>
+  <keywords>amaplocation,amap</keywords>
   <license>Apache 2.0</license>
   <repo>https://github.com/tomisacatyet/AMap4Location.git</repo>
   <issue>https://github.com/tomisacatyet/AMap4Location/issues</issue>
@@ -24,11 +24,11 @@
   <platform name="android">
     <config-file target="res/xml/config.xml" parent="/*">
       <feature name="AMap4LocationPlugin">
-        <param name="android-package" value="com.tomisacat.cordova.AMapLocationPlugin" />
+        <param name="android-package" value="com.tomisacat.cordova.AMap4LocationPlugin" />
       </feature>
     </config-file>
     <!-- android -->
-    <source-file src="src/android/AMapLocationPlugin.java"
+    <source-file src="src/android/AMap4LocationPlugin.java"
                  target-dir="src/com/tomisacat/cordova" />
     <source-file src="src/android/AMap_Location_V2.2.0_20151222.jar" target-dir="libs" />
 
@@ -50,15 +50,17 @@
       <!-- 写入扩展存储，向扩展卡写入数据，用于写入缓存定位数据-->
       <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
     </config-file>
+
     <config-file target="AndroidManifest.xml" parent="/manifest/application">
       <!-- 定位需要的服务 -->
       <service android:name="com.amap.api.location.APSService" />
-      <!--<meta-data-->
-              <!--android:name="com.amap.api.v2.apikey"-->
-              <!--android:value="0670a615d302adc5f1dfc5fa030c9c14" />-->
       <meta-data
               android:name="com.amap.api.v2.apikey"
-              android:value="12b0bfa6074cd52561528ad5991d9c1d" />
+              android:value="0670a615d302adc5f1dfc5fa030c9c14" />
+      <!--APIKey-->
+      <!--<meta-data-->
+              <!--android:name="com.amap.api.v2.apikey"-->
+              <!--android:value="12b0bfa6074cd52561528ad5991d9c1d" />-->
     </config-file>
 
   </platform>
@@ -92,8 +94,9 @@
       </dict>
     </config-file>
 
+    <!--APIKey 请自行配置 参照高德官网-->
     <config-file target="*-Info.plist" parent="AMapApiKey">
-      <string>申请的apiKey</string>
+      <string>4b2050d5cdfc48ff81e625caae0b453f</string>
     </config-file>
 
   </platform>
