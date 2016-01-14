@@ -92,5 +92,9 @@
       </dict>
     </config-file>
 
+    <config-file target="*-Info.plist" parent="AMapApiKey">
+      <string>申请的apiKey</string>
+    </config-file>
+
   </platform>
 </plugin>
