@@ -111,6 +111,10 @@ public class AMap4LocationPlugin extends CordovaPlugin implements AMapLocationLi
             }
         }catch (Exception ex){
             Log.e("AMapLocationPlugin",ex.toString());
+        }finally{
+          if(locationClient != null && locationClient.isStarted()){
+              locationClient.stopLocation();
+          }
         }
 
     }
