@@ -21,10 +21,8 @@
         [AMapLocationServices sharedServices].apiKey = [self getAMapApiKey];
         //init locationManager
         self.locationManager = [[AMapLocationManager alloc]init];
-    }
-    //set DesiredAccuracy
-    if(![self.locationManager desiredAccuracy]){
-        [self.locationManager setDesiredAccuracy:kCLLocationAccuracyThreeKilometers];
+        //set DesiredAccuracy
+        [self.locationManager setDesiredAccuracy:kCLLocationAccuracyHundredMeters];
     }
 }
 
@@ -32,13 +30,13 @@
 //location method
 -(void) location:(CDVInvokedUrlCommand*)command{
     [self initConfig];
-    
+
     [self.commandDelegate runInBackground:^{
         [self.locationManager requestLocationWithReGeocode:YES completionBlock:^(CLLocation *location, AMapLocationReGeocode *regeocode, NSError *error) {
             CDVPluginResult* pluginResult = nil;
             if (error)
             {
-                
+
                 if (error.code == AMapLocationErrorLocateFailed)
                 {
                 NSString *errorCode = [NSString stringWithFormat: @"%ld", (long)error.code];
